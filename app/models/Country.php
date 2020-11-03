@@ -18,7 +18,7 @@ class Country extends Model
 
     public function doctorProfile()
     {
-        return $this->belongsTo(DoctorProfile::class, 'country_id');
+        return $this->hasMany(DoctorProfile::class);
     }
 
 }

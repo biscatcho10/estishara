@@ -14,7 +14,7 @@ class Rating extends Model
 
     public function doctor()
     {
-        return $this->belongsTo(DoctorProfile::class, 'doctor_id');
+        return $this->belongsTo(DoctorProfile::class);
     }
 
 }

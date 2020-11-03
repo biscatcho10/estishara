@@ -11,5 +11,4 @@ class UserFavorite extends Model
 
     protected $filable = ['user_id', 'doctor_id'];
 
-
 }

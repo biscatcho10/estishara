@@ -15,7 +15,7 @@ class CreateDoctorProfileTranslationsTable extends Migration
     {
         Schema::create('doctor_profile_translations', function (Blueprint $table) {
             $table->id();
-            $table->integer('doctor_profile_id');
+            $table->unsignedBigInteger('doctor_profile_id');
             $table->string('locale');
             $table->longText('bio');
             $table->unique(['doctor_profile_id', 'locale']);

@@ -42,7 +42,7 @@ class Doctor extends Authenticatable
 
     public function doctorProfile()
     {
-        return $this->hasOne(DoctorProfile::class, 'doctor_id');
+        return $this->hasOne(DoctorProfile::class);
     }
 }
 

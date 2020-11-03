@@ -15,7 +15,7 @@ class CreateCountryTranslationsTable extends Migration
     {
         Schema::create('country_translations', function (Blueprint $table) {
             $table->id();
-            $table->integer('country_id');
+            $table->unsignedBigInteger('country_id');
             $table->string('locale');
             $table->string('name');
             $table->unique(['country_id', 'locale']);

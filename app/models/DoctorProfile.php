@@ -31,19 +31,24 @@ class DoctorProfile extends Model
 
     protected $translatedAttributes = ['bio'];
 
-    public function profile()
+    public function doctor()
     {
-        return $this->belongsTo(Doctor::class, 'doctor_id');
+        return $this->belongsTo(Doctor::class);
     }
 
-    public function country()
+    public function countries()
     {
-        return $this->hasOne(Country::class ,'country_id');
+        return $this->belongsTo(Country::class);
     }
 
-    public function specialty()
+    public function specialties()
     {
-        return $this->hasOne(Specialty::class ,'specialty_id');
+        return $this->belongsTo(Specialty::class);
+    }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
     }
 
 }
